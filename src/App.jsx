@@ -5,19 +5,47 @@ import { Footer } from "./components/Footer"
 import { Container } from "./components/Container"
 import { Login } from "./pages/Login"
 import { Register } from "./pages/Register"
+import { AuthProvider } from "./context/AuthContext"
+import { useEffect, useState } from "react"
+import { useAuthentication } from "./hooks/useAuthentication"
+import Loader from "./components/Loader"
+import { onAuthStateChanged } from "firebase/auth"
+import { CreatePost } from "./pages/CreatePost"
+import { Dashboard } from "./pages/Dashboard"
 
 export function App() {
+  const [user, setUser] = useState(undefined);
+  const { auth } = useAuthentication(); //getAuth
+
+  const isLoadingUser = user === undefined;
+
+  //everytime Auth changes 
+  useEffect(() => {
+    //get the current user 
+    onAuthStateChanged(auth, (user) => {
+      setUser(user);
+    });
+  }, [auth])
+
+  if (isLoadingUser) {
+    return <Loader />
+  }
+
   return (
-    <BrowserRouter>
-      <Nav />
-      <Container>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </Container>
-      <Footer />
-    </BrowserRouter>
+    <AuthProvider value={{ user }}>
+      <BrowserRouter>
+        <Nav />
+        <Container>
+          <Routes>
+            <Route path="/" element={user ? <Home /> : <Navigate to="/login" />} />
+            <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
+            <Route path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
+            <Route path="/posts/create" element={user ? <CreatePost /> : <Navigate to="/login" />} />
+            <Route path="/dashboard" element={user ? <Dashboard /> : <Navigate to="/login" />} />
+          </Routes>
+        </Container>
+        <Footer />
+      </BrowserRouter>
+    </AuthProvider>
   )
 }

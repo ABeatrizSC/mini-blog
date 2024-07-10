@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     text-align: center;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const Title = styled.h1`
@@ -14,6 +14,7 @@ export const Title = styled.h1`
 `;
 
 export const Form = styled.form`
+    width: 300px;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -27,4 +28,9 @@ export const Label = styled.label`
     gap: 5px;
     align-items: flex-start;
     width: 100%;
+`;
+
+export const ErrorMessage = styled.p`
+    text-transform: uppercase;
+    color: ${props => props.theme.colors.red};
 `;

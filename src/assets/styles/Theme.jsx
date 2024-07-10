@@ -10,6 +10,7 @@ export const theme = {
     redHover: "#991E1E",
     text: "#FAFAFA",
     blackBackground: "#212121",
+    loaderBackground: "#212121c1",
     primary: "#5b217c",
     primaryHover: "#522972",
   },

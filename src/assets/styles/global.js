@@ -37,26 +37,7 @@ export const GlobalStyle = createGlobalStyle`
 
     a {
         text-decoration: none!important;
-        color: black;
-        transition: all 400ms ease-in-out;
-    }
-
-    button {
-        background-color:  ${props => props.theme.colors.primary};
-        color: inherit;
-        cursor: pointer;
-        border: none;
-        width: fit-content;
-        padding: 10px 15px;
-        border-radius: 7px;
-        font-family:  ${props => props.theme.fontFamily.poppins};
-        text-transform: uppercase;
-        font-weight: 500;
-        letter-spacing: 1px;
-
-        &:hover {
-            background-color: ${props => props.theme.colors.primaryHover};
-        }
+        color: ${props => props.theme.colors.primary};
     }
 
     input {

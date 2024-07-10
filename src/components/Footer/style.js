@@ -9,8 +9,6 @@ export const StyledFooter = styled.footer`
     align-items: center;
     justify-content: center;
     color: inherit;
-    position: fixed;
-    bottom: 0;
 `;
 
 export const Copyright = styled.p`
