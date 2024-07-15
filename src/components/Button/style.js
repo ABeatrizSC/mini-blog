@@ -12,6 +12,9 @@ export const StyledButton = styled.button`
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
         background-color: ${props => props.theme.colors.primaryHover};

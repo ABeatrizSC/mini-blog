@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { db } from '../firebase/config';
+import { app, db } from '../firebase/config';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, signOut } from 'firebase/auth';
 import { useState } from 'react';
 
@@ -10,7 +10,7 @@ export function useAuthentication() {
     //cleanup
     const [cancelled, setCancelled] = useState(false);
 
-    const auth = getAuth();
+    const auth = getAuth(app);
 
     const isCancelled = () => {
         if (cancelled) {

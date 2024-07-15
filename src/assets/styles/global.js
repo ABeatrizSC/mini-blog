@@ -40,12 +40,14 @@ export const GlobalStyle = createGlobalStyle`
         color: ${props => props.theme.colors.primary};
     }
 
-    input {
+    input, textarea {
         padding: 10px 15px;
         border-radius: 7px;
         border: none;
         width: 100%;
         border: none;
         outline: 0;
+        font-family: inherit;
+        font-size: inherit;
     }
 `;

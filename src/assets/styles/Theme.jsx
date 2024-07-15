@@ -13,6 +13,7 @@ export const theme = {
     loaderBackground: "#212121c1",
     primary: "#5b217c",
     primaryHover: "#522972",
+    tagsBackground: "#5b217c3b",
   },
   fontFamily: {
     poppins: ["Poppins", "sans-serif"].join(","),

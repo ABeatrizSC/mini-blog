@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Title, Form, Label, ErrorMessage } from '../../assets/styles/authForm'
+import { Container, Title, Form, Label, ErrorMessage } from '../../assets/styles/form'
 import { NavLink } from 'react-router-dom'
 import { Button } from '../../components/Button'
-import Loader from '../../components/Loader';
+import { Loader } from '../../components/Loader';
 import { useAuthentication } from '../../hooks/useAuthentication';
 
 export function Login() {
