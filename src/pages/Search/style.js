@@ -8,7 +8,7 @@ export const SearchResultHeader = styled.div`
     & button {
         position: absolute;
         top: 50%;
-        left: 25px;
+        left: 0px;
         transform: translateY(-50%)
     }
 `;

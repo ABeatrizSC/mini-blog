@@ -1,7 +1,7 @@
 import React from 'react'
 import { useQuery } from '../../hooks/useQuery'
 import { Button } from '../../components/Button';
-import { ArrowLeft } from 'lucide-react';
+import { Home } from 'lucide-react';
 import { useFetchDocuments } from '../../hooks/useFetchDocuments';
 import { Post } from '../../components/Post';
 import { PostsContainer, NoPostsContainer } from '../../components/Post/style'
@@ -18,7 +18,7 @@ export function Search() {
         <div>
             <SearchResultHeader>
                 <Button navigationLink={"/"}>
-                    <ArrowLeft />
+                    <Home />
                 </Button>
                 <h1>Exibindo posts com a tag "{search}"</h1>
             </SearchResultHeader>

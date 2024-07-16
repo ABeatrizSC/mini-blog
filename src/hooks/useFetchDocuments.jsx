@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { db } from '../firebase/config'
 import { collection, query, orderBy, onSnapshot, where } from 'firebase/firestore'
 
@@ -25,10 +25,8 @@ export function useFetchDocuments(docCollection, search = null, uid = null) {
                 if (search) {
                     //gets posts where the "tags" field has an array that contains the search
                     q = await query(collectionRef, where("tagsArray", "array-contains", search), orderBy("createdAt", "desc"));
-/*                  } else if (uid){
-                    q = await query(collectionRef, where("uid", "==", uid
-                    ), orderBy("createdAt", "desc")); 
-                    console.log("q", q) */
+                } else if (uid) {
+                    q = await query(collectionRef, where("uid", "==", uid), orderBy("createdAt", "desc"));
                 } else {
                     //collection ordered
                     q = await query(collectionRef, orderBy("createdAt", "desc"));
