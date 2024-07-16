@@ -73,6 +73,7 @@ export const MenuMobile = styled.div`
     flex-direction: column;
     gap: 15px;
     align-items: center;
+    justify-content: center;
     padding: 30px 25px;
     transition: all 350ms ease-in-out; 
     z-index: 1;

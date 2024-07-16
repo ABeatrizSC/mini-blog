@@ -68,29 +68,49 @@ export function Nav() {
               <Menu />
             </OpenMenuButton>
           </NavItemList>
-          <NavItemList>
-            <LogoutButton onClick={logout}>
-              Sair
-            </LogoutButton>
-          </NavItemList>
+          {user &&
+            <NavItemList>
+              <LogoutButton onClick={logout}>
+                Sair
+              </LogoutButton>
+            </NavItemList>
+          }
         </NavListMobile>
       </Navbar>
       <MenuMobile style={{ top: isMenuOpened ? '60px' : '-100%' }}>
-        <NavItemList onClick={toggleMenu}>
-          <NavLink to="/">
-            Home
-          </NavLink>
-        </NavItemList>
-        <NavItemList onClick={toggleMenu}>
-          <NavLink to="/posts/create">
-            Criar post
-          </NavLink>
-        </NavItemList>
-        <NavItemList onClick={toggleMenu}>
-          <NavLink to="/dashboard">
-            Dashboard
-          </NavLink>
-        </NavItemList>
+        {user &&
+          <>
+            <NavItemList onClick={toggleMenu}>
+              <NavLink to="/">
+                Home
+              </NavLink>
+            </NavItemList>
+            <NavItemList onClick={toggleMenu}>
+              <NavLink to="/posts/create">
+                Criar post
+              </NavLink>
+            </NavItemList>
+            <NavItemList onClick={toggleMenu}>
+              <NavLink to="/dashboard">
+                Dashboard
+              </NavLink>
+            </NavItemList>   
+          </>
+        }
+        {!user &&
+          <>
+            <NavItemList onClick={toggleMenu}>
+              <NavLink to="/login">
+                Login
+              </NavLink>
+            </NavItemList>
+            <NavItemList onClick={toggleMenu}>
+              <NavLink to="/register">
+                Registrar
+              </NavLink>
+            </NavItemList>
+          </> 
+        }
       </MenuMobile>
     </>
   )
