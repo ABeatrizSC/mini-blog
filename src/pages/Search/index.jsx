@@ -1,4 +1,5 @@
 import React from 'react'
+import './style'
 import { useQuery } from '../../hooks/useQuery'
 import { Button } from '../../components/Button';
 import { Home } from 'lucide-react';

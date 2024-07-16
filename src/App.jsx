@@ -41,12 +41,12 @@ export function App() {
         <Container>
           <Routes>
             <Route path="/" element={user ? <Home /> : <Navigate to="/login" />} />
-            <Route path="/search" element={<Search />} />
+            <Route path="/search" element={user ? <Search /> : <Navigate to="/login" />} />
             <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
             <Route path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
             <Route path="/posts/create" element={user ? <CreatePost /> : <Navigate to="/login" />} />
             <Route path="/posts/edit/:id" element={user ? <EditPost /> : <Navigate to="/login" />} />
-            <Route path="/posts/:id" element={<PostDetails />} />
+            <Route path="/posts/:id" element={user ? <PostDetails /> : <Navigate to="/login" />} />
             <Route path="/dashboard" element={user ? <Dashboard /> : <Navigate to="/login" />} />
           </Routes>
         </Container>

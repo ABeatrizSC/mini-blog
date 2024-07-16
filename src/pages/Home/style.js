@@ -9,6 +9,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: start;
     gap: 50px;
+    text-align: center
 `;
 
 export const SearchForm = styled(Form)`

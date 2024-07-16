@@ -22,7 +22,7 @@ export const Table = styled.table`
     overflow-y: auto;
     border-radius: 10px;
     padding: 5px;
-    background-color: #302e2e;
+    background-color: ${props => props.theme.colors.componentBackground};
 `;
 
 export const TableHeader = styled.th`
@@ -38,13 +38,15 @@ export const TableRow = styled.tr`
 
 export const TableData= styled.td`
     border-radius: 5px;
-    padding: 10px 0;
+    padding: 10px 5px;
 `;
 
 export const ActionsContainer= styled.span`
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
 
     & a {
         color: ${props => props.theme.colors.white};
@@ -57,5 +59,9 @@ export const DeleteButton = styled(StyledButton)`
 
     &:hover {
         background-color: ${props => props.theme.colors.redHover};
+    }
+
+    @media screen and (max-width: 750px) {
+        padding: 5px;
     }
 `;

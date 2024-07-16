@@ -21,15 +21,13 @@ export const NoPostsContainer = styled.div`
 `;
 
 export const PostContainer = styled.div`
+    background-color: ${props => props.theme.colors.componentBackground};
     max-width: 500px;
     min-width: 300px;
     height: auto;
     padding: 20px 25px;
-    background-color: ${ props => props.theme.colors.blackBackground};
     border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.26);
-    -moz-box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.26);
-    box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.26);
+    box-shadow: 0px 0px 26px -6px rgba(0,0,0,0.6);
     display: flex;
     flex-direction: column;
     justify-content: space-between;

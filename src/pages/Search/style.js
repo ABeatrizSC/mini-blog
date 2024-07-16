@@ -1,14 +1,22 @@
 import styled from "styled-components";
 
 export const SearchResultHeader = styled.div`
-    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
     text-align: center;
     margin-bottom: 70px;
+    gap: 15px;
 
-    & button {
-        position: absolute;
-        top: 50%;
-        left: 0px;
-        transform: translateY(-50%)
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    & h1 {
+        flex: 1;
+        width: 100%;
+        text-align: center;
     }
 `;
