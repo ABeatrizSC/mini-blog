@@ -68,7 +68,7 @@ export function Nav() {
               <Menu />
             </OpenMenuButton>
           </NavItemList>
-          <NavItemList onClick={toggleMenu}>
+          <NavItemList>
             <LogoutButton onClick={logout}>
               Sair
             </LogoutButton>
