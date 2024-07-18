@@ -23,7 +23,7 @@
 <ul style="display: flex; flex-direction: column; gap: 15px">
   <li>Através do projeto Mini Blog, é possível realizar cadastro/login, publicar, alterar, visualizar e remover posts;
   </li>
-  <li>A integração com o Back-end foi feita utilizando o <a href="https://firebase.google.com/docs/guides?hl=pt-br" target="_blank">Firebase</a>, o qual fornece toda a estrutura necessária e armazena seus dados em um banco NoSQL;
+  <li>O Back-End foi feito utilizando a plataforma do <a href="https://firebase.google.com/docs/guides?hl=pt-br" target="_blank">Firebase</a>, o qual fornece toda a estrutura necessária e armazena seus dados em um banco NoSQL;
   </li>
   <li>A implementação da autenticação foi feita com <a href="https://firebase.google.com/docs/auth?hl=pt-br" target="_blank">Firebase Authentication</a>, sendo necessário apenas um email e senha. Há bloqueio de acesso às páginas que necessitam de um usuário logado, sendo encaminhadas automaticamente para a página de login;</li>
   <li>Com este projeto, pude aprender mais sobre o Firebase e sua integração com o lado Front-End da aplicação.</li>
@@ -109,13 +109,14 @@
 <p>Dê <i>ctrl + click </i> no endereço de link gerado para abrir o projeto em seu navegador.</p>
 
 <h3 align="center">CONFIGURAÇÃO DO FIREBASE</h3>
+<p>Para criar seu próprio projeto/banco de dados no Firebase, siga o passo a passo:</p>
 <h4>1. Login/Cadastro</h4>
 <p>Faça login ou cadastre-se no <a href="https://firebase.google.com/?hl=pt-br" target="_blank">site oficial do Firebase;</a></p>
 
 <h4>2. Crie o projeto</h4>
 <p> Ir em "Go To Console" ➡ "Criar um projeto" ➡ Insira o nome do projeto (mini-blog) ➡ Desative o Google Analytics do Projeto (opcional) ➡ "Criar projeto";</p>
 
-<h4>3. Registe o App</h4>
+<h4>3. Registre o App</h4>
 <p>Clique no botão "&lt;/&gt;" ➡ Registre o App (mini-blog) com a opção de hoisting desativada ➡ substitua a variável <code>firebaseConfig</code> do arquivo firebase/config.js com as novas configurações fornecidas;</p>
 
 <h4>5. Crie a autenticação por e-mail e senha</h4>
@@ -125,7 +126,7 @@
 <p>Ainda no menu lateral esquerdo, vá em "Firestore Database" ➡ "Criar banco de dados" ➡ "Próxima" ➡ "Iniciar modo teste" e "Criar";</p>
 
 <h4>7. Adicione índices de busca</h4>
-<p>Firestore Database ➡ "Índices" ➡ "Criar índice";</p>
+<p>"Firestore Database" ➡ "Índices" ➡ "Criar índice";</p>
 <p>Crie os seguintes índices:	<code>tagsArray Matrizes createdAt Decrescente __name__ Decrescente </code>&nbsp;e <code>uid Crescente createdAt Decrescente __name__ Decrescente</code>&nbsp; para que as buscas dentro do App funcionem.</p>
 
 <h2 name="contato">🔍 Contato:</h2>
