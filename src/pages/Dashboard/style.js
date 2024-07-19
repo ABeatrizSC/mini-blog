@@ -18,8 +18,6 @@ export const TableContainer = styled.div`
 export const Table = styled.table`
     width: 100%;
     max-width: 1700px;
-    max-height: 50vh;
-    overflow-y: auto;
     border-radius: 10px;
     padding: 5px;
     background-color: ${props => props.theme.colors.componentBackground};

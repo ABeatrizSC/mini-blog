@@ -27,17 +27,21 @@ export function CreatePost() {
     
     //validations
     //URL image
+    // validate image
     try {
       new URL(image);
     } catch (error) {
-      setFormError("URL da imagem inválida.")
+      setFormError("A imagem precisa ser uma URL.");
+      return;
     }
+
     //create tags array
     const tagsArray = tags.split(',').map((tag) => tag.trim().toLowerCase());
     
     //check all values
     if (!body || !title || !image || !tags) {
       setFormError("Por favor, preencha todos os campos.")
+      return;
     }
     
     if (formError) return;

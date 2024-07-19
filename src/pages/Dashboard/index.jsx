@@ -11,7 +11,7 @@ import { Edit, EyeIcon, Trash } from 'lucide-react';
 
 export function Dashboard() {
   const { user } = useAuthValue();
-  const uid = user.id;
+  const uid = user.uid;
   //get the posts by user id
   const {documents: posts, loading} = useFetchDocuments("posts", null, uid);
   //get the hook to delete a post

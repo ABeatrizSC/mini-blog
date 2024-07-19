@@ -22,8 +22,7 @@ export const NoPostsContainer = styled.div`
 
 export const PostContainer = styled.div`
     background-color: ${props => props.theme.colors.componentBackground};
-    max-width: 500px;
-    min-width: 300px;
+    width: 450px;
     height: auto;
     padding: 20px 25px;
     border-radius: 10px;
@@ -33,6 +32,14 @@ export const PostContainer = styled.div`
     justify-content: space-between;
     gap: 15px;
     align-items: center;
+
+    @media screen and (max-width: 510px) {
+        width: 350px;
+    }
+
+    @media screen and (max-width: 360px) {
+        width: 300px;
+    }
 `;
 
 export const PostAuthor = styled.span`
