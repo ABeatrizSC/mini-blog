@@ -19,6 +19,10 @@
   [Sobre](#sobre)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; [Rotas (Telas)](#rotas)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; [Deploy](#deploy)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; [Tecnologias](#tecnologias)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; [Instalacoes necessarias](#instalacoes)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; [Contato](#contato)
 </div>
 
+
+https://github.com/user-attachments/assets/017cc061-83ee-4963-8103-c753dde5dfe7
+
+
 <h2 name="sobre">📝 Sobre</h2>
 <ul style="display: flex; flex-direction: column; gap: 15px">
   <li>Através do projeto Mini Blog, é possível realizar cadastro/login, publicar, alterar, visualizar e remover posts;
@@ -120,7 +124,7 @@
 <p>Clique no botão "&lt;/&gt;" ➡ Registre o App (mini-blog) com a opção de hoisting desativada ➡ substitua a variável <code>firebaseConfig</code> do arquivo firebase/config.js com as novas configurações fornecidas;</p>
 
 <h4>5. Crie a autenticação por e-mail e senha</h4>
-<p>No menu lateral esquerdo, vá em "Criação" ➡ "Autenticação" ➡ "Método de Login" ➡ "E-mail/senha" ➡ Ativeas duas opções e salve;</p>
+<p>No menu lateral esquerdo, vá em "Criação" ➡ "Autenticação" ➡ "Método de Login" ➡ "E-mail/senha" ➡ Ative as duas opções e salve;</p>
 
 <h4>6. Crie o Banco de Dados</h4>
 <p>Ainda no menu lateral esquerdo, vá em "Firestore Database" ➡ "Criar banco de dados" ➡ "Próxima" ➡ "Iniciar modo teste" e "Criar";</p>
